@@ -1,0 +1,12 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "remoteUser": "ubuntu",
+    "containerUser": "ubuntu",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/yocto,type=bind",
+    "workspaceFolder": "/yocto",
+    "containerEnv": {
+        "TEMPLATECONF": "/yocto/meta-megabit/conf/templates/conf"
+    }
+}
