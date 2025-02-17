@@ -1,6 +1,6 @@
 Include /etc/ssh/sshd_config.d/*.conf
 
-PermitRootLogin yes
+PermitRootLogin no
 AuthorizedKeysFile  .ssh/authorized_keys
 KbdInteractiveAuthentication no
 
