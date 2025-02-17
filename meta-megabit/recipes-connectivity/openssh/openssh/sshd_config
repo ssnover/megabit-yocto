@@ -1,0 +1,11 @@
+Include /etc/ssh/sshd_config.d/*.conf
+
+PermitRootLogin yes
+AuthorizedKeysFile  .ssh/authorized_keys
+KbdInteractiveAuthentication no
+
+Compression no
+ClientAliveInterval 15
+ClientAliveCountMax 4
+
+Subsystem   sftp    /usr/libexec/sftp-server
