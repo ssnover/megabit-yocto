@@ -3,15 +3,16 @@ LICENSE = "MIT"
 IMAGE_FEATURES += "splash ssh-server-openssh"
 #DEPENDS = "user-config"
 
-inherit core-image
+IMAGE_INSTALL:append = " blink "
 
+inherit core-image
 
 inherit extrausers
 
 #
 # Add a user for service access.
 #
-IMAGE_INSTALL:append = " sudo"
+IMAGE_INSTALL:append = " sudo "
 
 # Password generated with `openssl passwd -6 PASSWORD` and then escapes added.
 PASSWD = "\$6\$ffEoii/MGxmievry\$w4qQjY3jv79fTLm06fjU3Vb7i4b3D.HjzIkAjZez6FJHoK6ZYijCVIiQQRo3DnXr4hw7YzI7sMpS/iHXV6PTa0"
