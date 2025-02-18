@@ -1,0 +1,8 @@
+[Unit]
+Description=Blink startup script
+
+[Service]
+ExecStart=/usr/bin/pi-blink
+
+[Install]
+WantedBy=multi-user.target

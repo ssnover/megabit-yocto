@@ -8,5 +8,8 @@
     "workspaceFolder": "/yocto",
     "containerEnv": {
         "TEMPLATECONF": "/yocto/meta-megabit/conf/templates/conf"
-    }
+    },
+    "mounts": [
+        "source=${localEnv:HOME}/.ssh,target=/home/ubuntu/.ssh"
+    ]
 }

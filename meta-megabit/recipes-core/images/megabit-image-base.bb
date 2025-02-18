@@ -3,10 +3,9 @@ LICENSE = "MIT"
 IMAGE_FEATURES += "splash ssh-server-openssh"
 #DEPENDS = "user-config"
 
-IMAGE_INSTALL:append = " blink "
+IMAGE_INSTALL:append = " blink blink-systemd"
 
 inherit core-image
-
 inherit extrausers
 
 #
@@ -30,3 +29,11 @@ EXTRA_USERS_PARAMS:append = "\
     usermod -L -e 1 root; \
     usermod -s /sbin/nologin root; \
     "
+
+#
+# Enable systemd
+#
+DISTRO_FEATURES:append = " systemd"
+DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+VIRTUAL-RUNTIME_init_manager = "systemd"
+VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
